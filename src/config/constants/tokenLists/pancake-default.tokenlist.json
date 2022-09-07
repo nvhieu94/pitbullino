@@ -1,0 +1,22 @@
+{
+  "name": "PancakeSwap Default List",
+  "timestamp": "2022-01-26T11:45:09Z",
+  "version": {
+    "major": 4,
+    "minor": 0,
+    "patch": 0
+  },
+  "tags": {},
+  "logoURI": "https://pancakeswap.finance/logo.png",
+  "keywords": ["pancake", "default"],
+  "tokens": [
+    {
+      "name": "Pitbull Inu",
+      "symbol": "PITI",
+      "address": "0xBFF96267C5A60aa61763dD7159DA14d6DF6Da371",
+      "chainId": 56,
+      "decimals": 9,
+      "logoURI": "https://pitbullinu.io/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsection_6right.92f9c98d.png&w=384&q=75"
+    }
+  ]
+}

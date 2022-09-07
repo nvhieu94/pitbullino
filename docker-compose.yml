@@ -1,0 +1,29 @@
+version: "3.3"
+
+services:
+  nextjs:
+    image: leonguyen1994/pitbull:latest
+    ports:
+      - 3102:3000
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    environment: 
+      - NEXT_PUBLIC_CHAIN_ID=$${NEXT_PUBLIC_CHAIN_ID}
+      - NEXT_PUBLIC_GTAG=$${NEXT_PUBLIC_GTAG}
+      - NEXT_PUBLIC_NODE_1=$${NEXT_PUBLIC_NODE_1}
+      - NEXT_PUBLIC_NODE_2=$${NEXT_PUBLIC_NODE_2}
+      - NEXT_PUBLIC_NODE_3=$${NEXT_PUBLIC_NODE_3}
+      - NEXT_PUBLIC_NODE_PRODUCTION=$${NEXT_PUBLIC_NODE_PRODUCTION}
+      - NEXT_PUBLIC_GRAPH_API_PROFILE=$${NEXT_PUBLIC_GRAPH_API_PROFILE}
+      - NEXT_PUBLIC_GRAPH_API_PREDICTION=$${NEXT_PUBLIC_GRAPH_API_PREDICTION}
+      - NEXT_PUBLIC_GRAPH_API_LOTTERY=$${NEXT_PUBLIC_GRAPH_API_LOTTERY}
+      - NEXT_PUBLIC_GRAPH_API_NFT_MARKET=$${NEXT_PUBLIC_GRAPH_API_NFT_MARKET}
+      - NEXT_PUBLIC_SNAPSHOT_BASE_URL=$${NEXT_PUBLIC_SNAPSHOT_BASE_URL}
+      - NEXT_PUBLIC_API_NFT=$${NEXT_PUBLIC_API_NFT}
+      - NEXT_PUBLIC_BIT_QUERY_ENDPOINT=$${NEXT_PUBLIC_BIT_QUERY_ENDPOINT}
+    volumes:
+      - ./packages/pitbull:/app
+      - /app/.next
+    env_file:
+      - .env.production
